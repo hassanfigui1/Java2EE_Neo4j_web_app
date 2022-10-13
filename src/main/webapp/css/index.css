@@ -1,0 +1,9 @@
+@charset "ISO-8859-1";
+/*Main CSS*/
+
+
+/*Login Signup Page*/
+a:focus,a:hover,a{
+    outline:none;
+    text-decoration: none;
+}

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<welcome-file-list>
+		<welcome-file>index.html</welcome-file>
+		<welcome-file>index.htm</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+		<welcome-file>default.html</welcome-file>
+		<welcome-file>default.htm</welcome-file>
+		<welcome-file>default.jsp</welcome-file>
+	</welcome-file-list>	
+	
+	<servlet>
+		<servlet-name>login</servlet-name>
+		<servlet-class>controller.Login</servlet-class>
+		</servlet>
+		<servlet-mapping>
+			<servlet-name>login</servlet-name>
+			<url-pattern>/Login</url-pattern>
+		</servlet-mapping >
+		
+			<servlet>
+		<servlet-name>getArticles</servlet-name>
+		<servlet-class>controller.getArticles</servlet-class>
+		</servlet>
+			<servlet>
+				<description>
+				</description>
+				<display-name>AddAuthor</display-name>
+				<servlet-name>AddAuthor</servlet-name>
+				<servlet-class>controller.AddAuthor</servlet-class>
+			</servlet>
+			<servlet>
+				<description></description>
+				<display-name>AddArticle</display-name>
+				<servlet-name>AddArticle</servlet-name>
+				<servlet-class>controller.AddArticle</servlet-class>
+			</servlet>
+			<servlet>
+				<description>
+				</description>
+				<display-name>LogOut</display-name>
+				<servlet-name>LogOut</servlet-name>
+				<servlet-class>controller.LogOut</servlet-class>
+			</servlet>
+			<servlet>
+				<description>
+				</description>
+				<display-name>GetRecommendation</display-name>
+				<servlet-name>GetRecommendation</servlet-name>
+				<servlet-class>controller.GetRecommendation</servlet-class>
+			</servlet>
+			<servlet>
+				<description>
+				</description>
+				<display-name>ModifyInfoAuthor</display-name>
+				<servlet-name>ModifyInfoAuthor</servlet-name>
+				<servlet-class>controller.ModifyInfoAuthor</servlet-class>
+			</servlet>
+		<servlet-mapping>
+			<servlet-name>getArticles</servlet-name>
+			<url-pattern>/getArticles</url-pattern>
+		</servlet-mapping >
+		<servlet-mapping>
+			<servlet-name>AddAuthor</servlet-name>
+			<url-pattern>/AddAuthor</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>AddArticle</servlet-name>
+			<url-pattern>/AddArticle</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>LogOut</servlet-name>
+			<url-pattern>/LogOut</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>GetRecommendation</servlet-name>
+			<url-pattern>/GetRecommendation</url-pattern>
+		</servlet-mapping>
+		<servlet-mapping>
+			<servlet-name>ModifyInfoAuthor</servlet-name>
+			<url-pattern>/ModifyInfoAuthor</url-pattern>
+		</servlet-mapping>
+		
+		
+</web-app>
