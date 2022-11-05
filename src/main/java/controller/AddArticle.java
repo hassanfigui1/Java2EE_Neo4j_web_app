@@ -50,7 +50,6 @@ public class AddArticle extends HttpServlet {
 				Keyword keyword = new Keyword(keywords);
 				Article article = new Article(title,abbreviation,keyword);
 				String email = (String)userSession.getAttribute("userSession");
-				System.out.println(email);
 				Auteur user = manager.getAuteur(email);
 				Auteur auteur = new Auteur(user.getId(),article);
 				manager.addArticle(auteur);
