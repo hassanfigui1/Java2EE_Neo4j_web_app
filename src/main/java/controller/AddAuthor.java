@@ -21,16 +21,6 @@ public class AddAuthor extends HttpServlet {
     }
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-//		String text = "python,java,google,php, youtube";
-//		String[] words=text.split(",");
-//		ArrayList<String> keyword = new ArrayList<String>();
-//		for(String str:words) {
-//			keyword.add(str);
-//		}
-//		System.out.println("arrayList values");
-//		for(String key:keyword) {
-//			System.out.println(key);
-//		}
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -42,7 +32,6 @@ public class AddAuthor extends HttpServlet {
 			String departement  = request.getParameter("departement");
 			if(manager.CheckEmail(email)) {
 				String msg ="This email exists, Try an other email";
-				System.out.println(msg);
 				request.setAttribute("msgError", msg);
 				request.getRequestDispatcher("register.jsp").forward(request, response);
 			}else {
