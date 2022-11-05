@@ -38,8 +38,6 @@ public class Login extends HttpServlet {
 		}if(session.getAttribute("userSession") ==null) {
 			userArticles.removeAll(userArticles);
 			ConnectedUser.removeAll(ConnectedUser);
-			System.out.println("from get "+userArticles);
-			System.out.println("After remove user"+ConnectedUser);
 
 		}
 			response.sendRedirect("Login.jsp");	
@@ -52,12 +50,10 @@ public class Login extends HttpServlet {
 			//check if the user's login and password exist
 			Auteur user =manager.getAuteur(email, mdp);
 			if(user!=null) {
-				System.out.println(user.toString());
 				ConnectedUser.add(user);
 				HttpSession session = request.getSession();
 				for(Article article: manager.GetUserArticles(user)) {
 					userArticles.add(article);
-//					System.out.println(article);
 				}
 
 				session.setAttribute("userSession", email);
@@ -87,10 +83,8 @@ public class Login extends HttpServlet {
 				Auteur auteur = new Auteur(user.getId(),article);
 				manager.addArticle(auteur);
 				userArticles.removeAll(userArticles);
-				System.out.println("userArticles"+userArticles);
 				for(Article articles: manager.GetUserArticles(user)) {
 					userArticles.add(articles);
-//					System.out.println(article);
 				}
 				doGet(request,response);
 				request.getRequestDispatcher("index.jsp").forward(request, response);
